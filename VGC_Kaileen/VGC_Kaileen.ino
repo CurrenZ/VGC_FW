@@ -131,6 +131,7 @@ void loop(){
   int joyh = analogRead(JOY_H);
   int joyp = analogRead(JOY_PRESS);
   
+  // when continue mode is set to false, these four line will be executed 
   // if harder key is pressed, fsr reading updates only when it is fully released
   if (!fsr1ContinueMode && r.is_pressed) fsr1 = (fsr1_tmp <= (FSR1_LITE_THD >> 1))? 0:fsr1;
   else fsr1 = fsr1_tmp;
